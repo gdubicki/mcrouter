@@ -18,8 +18,7 @@ export CXX=/opt/rh/devtoolset-4/root/usr/bin/c++
 # Transaction check error:
 #   file /usr/share/aclocal from install of cmake-3.1.0-1.x86_64 conflicts with file from package filesystem-3.2-21.el7.x86_64
 #
-sudo yum --downloadonly --downloaddir=$(pwd) install cmake
-sudo rpm -ivh --force cmake-*.rpm
+sudo yum --downloadonly --downloaddir=$(pwd) install cmake && rpm -ivh --force cmake-*.rpm
 
 sudo yum install -y \
     autoconf \
